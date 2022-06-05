@@ -46,7 +46,7 @@ if [[ -e /etc/wireguard/params ]]; then
 	exit 1
 fi
 
-echo -e "${Info} Wireguard Script Mod By SL"
+echo -e "${Info} Wireguard Script Mod By MasWay"
 # Detect public IPv4 address and pre-fill for the user
 
 # Detect public interface and pre-fill for the user
