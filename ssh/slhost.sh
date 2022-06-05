@@ -15,8 +15,8 @@ mkdir -p /etc/xray
 cp /root/domain /etc/xray/
 
 DOMAIN=nextvpn.xyz
-SUB_DOMAIN=${sub}.nextvpn.xyz
-NS_DOMAIN=${sub}nextvpn.xyz
+SUB_DOMAIN=${sub}ok.nextvpn.xyz
+NS_DOMAIN=${sub}www.nextvpn.xyz
 CF_ID=akunabal.abal7770@gmail.com
 CF_KEY=4502348bc050806208bb10e3a1af5b9d1d018
 #DOMAIN=akbar-store.me
