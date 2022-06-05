@@ -38,10 +38,6 @@ atau
 su
 ```
 
-### Link Video Tutorial Cara Install
-```html
-https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
-```
 
 ## INFO TAMBAHAN , SILAHKAN DI BACA 
 * MINIMAL RAM 1/2 GB UNTUK MENGGUNAKAN SCRIPT INI
@@ -73,7 +69,7 @@ Part 2: Buat Akses Root Di VPS /Root VPS
   <img src="https://img.shields.io/badge/Akses_Root%20VPS-green">
 Untuk Mengizinkan Root Dan Ubah Password Login di VPS Google Cloud Platform, Aws, Dan Lain-lain
    ```html
-  wget -qO- -O vpsroot.sh https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/vpsroot.sh && bash vpsroot.sh
+  wget -qO- -O vpsroot.sh https://raw.githubusercontent.com/Channel-Gratisan/scfull/main/vpsroot.sh && bash vpsroot.sh
   ```
   
 # 2.5
