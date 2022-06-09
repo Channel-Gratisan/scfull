@@ -42,11 +42,16 @@ MasWaynnnnnnnnn="raw.githubusercontent.com/Channel-Gratisan/scfull/main/ohp"
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$(wget -qO- ipinfo.io/ip);
-rm -f setup.sh
+IZIN=$( curl https://raw.githubusercontent.com/Channel-Gratisan/newsc/main/ip.sh | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${NC}${GREEN}Permission Accepted...${NC}"
+else
+echo -e "${NC}${RED}Permission Denied!${NC}";
+echo -e "${NC}${LIGHT}Please Contact Admin!!"
+echo -e "${NC}${LIGHT}Untuk User Premium!!"
+echo -e "${NC}${LIGHT}WhatsApp : 6283120857907"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/MasWayVPN"
 clear
-if [ -f "/etc/xray/domain" ]; then
-echo "Script Already Installed"
 exit 0
 fi
 mkdir /var/lib/crot;
@@ -70,9 +75,9 @@ wget https://${MasWaynnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
 wget https://${MasWaynnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 # Install Slowdns Server
-# wget https://raw.githubusercontent.com/Channel-Gratisan/scfull/main/Slowdns/install && chmod +x install && bash install
+wget https://raw.githubusercontent.com/Channel-Gratisan/scfull/main/Slowdns/install && chmod +x install && bash install
 # Informasi IP Saya dan Semua Port TCP UDP
-# wget https://raw.githubusercontent.com/Channel-Gratisan/scfull/main/ipsaya.sh && chmod +x ipsaya.sh
+wget https://raw.githubusercontent.com/Channel-Gratisan/scfull/main/ipsaya.sh && chmod +x ipsaya.sh
 #
 # install xray grpc
 wget https://raw.githubusercontent.com/Channel-Gratisan/scfull/main/grpc/sl-grpc.sh && chmod +x sl-grpc.sh && screen -S sl-grpc ./sl-grpc.sh
@@ -137,7 +142,7 @@ echo "   - XRAYS Vless None TLS    : 80"  | tee -a log-install.txt
 echo "   - XRAYS Trojan            : 2083"  | tee -a log-install.txt
 echo "   - XRAYS VMESS GRPC        : 1180"  | tee -a log-install.txt
 echo "   - XRAYS VLESS GRPC        : 2280"  | tee -a log-install.txt
-echo "   - CloudFront Websocket    : "  | tee -a log-install.txt
+echo "   - CloudFront Websocket    : [OFF]"  | tee -a log-install.txt
 echo "   - Websocket TLS           : 443"  | tee -a log-install.txt
 echo "   - Websocket None TLS      : 8880"  | tee -a log-install.txt
 echo "   - Websocket Ovpn          : 2086"  | tee -a log-install.txt
@@ -145,9 +150,9 @@ echo "   - OHP SSH                 : 8181"  | tee -a log-install.txt
 echo "   - OHP Dropbear            : 8282"  | tee -a log-install.txt
 echo "   - OHP OpenVPN             : 8383"  | tee -a log-install.txt
 echo "   - TrojanGo                : 2087"  | tee -a log-install.txt
-echo "   - SLOWDNS OpenSSH         : 2253[OFF]"  | tee -a log-install.txt
-echo "   - SLOWDNS Dropbear        : 1153[OFF]"  | tee -a log-install.txt
-echo "   - SLOWDNS SSL/TLS         : 3353[OFF]"  | tee -a log-install.txt
+echo "   - SLOWDNS OpenSSH         : 2253[ON]"  | tee -a log-install.txt
+echo "   - SLOWDNS Dropbear        : 1153[ON]"  | tee -a log-install.txt
+echo "   - SLOWDNS SSL/TLS         : 3353[ON]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
@@ -158,10 +163,6 @@ echo "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
 echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
 echo "   - Autoreboot On 05.00 GMT +7" | tee -a log-install.txt
 echo "   - Autobackup Data" | tee -a log-install.txt
-echo "   - Restore Data" | tee -a log-install.txt
-echo "   - Auto Delete Expired Account" | tee -a log-install.txt
-echo "   - Full Orders For Various Services" | tee -a log-install.txt
-echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo " Reboot 15 Sec"
 sleep 15
