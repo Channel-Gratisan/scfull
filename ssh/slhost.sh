@@ -15,18 +15,12 @@ mkdir -p /etc/xray
 cp /root/domain /etc/xray/
 
 DOMAIN=nextvpn.xyz
-SUB_DOMAIN=${sub}ok.nextvpn.xyz
-NS_DOMAIN=${sub}www.nextvpn.xyz
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c3)
+SUB_DOMAIN=${sub}.nextvpn.xyz
 CF_ID=akunabal.abal7770@gmail.com
 CF_KEY=4502348bc050806208bb10e3a1af5b9d1d018
-#DOMAIN=akbar-store.me
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-#SUB_DOMAIN=${sub}.akbar-store.me
-#NS_DOMAIN=sldns${sub}.akbar-store.me
 echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/ipvps.conf
 echo "$NS_DOMAIN" >> /root/nsdomain
-#CF_ID=sandigaming01@gmail.com
-#CF_KEY=3bbac9ca50413bd6b05c1b7989871a077c2c3
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
