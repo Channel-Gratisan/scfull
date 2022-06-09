@@ -78,4 +78,5 @@ echo $SUB_DOMAIN > /etc/v2ray/domain
 echo $SUB_DOMAIN > /etc/xray/domain
 echo $SUB_DOMAIN > /root/domain
 echo $SUB_DOMAIN > /etc/xray/domain
+echo $SUB_DOMAIN > /root/nsdomain
 
