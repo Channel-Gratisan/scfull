@@ -1,5 +1,5 @@
 #!/bin/bash
-# SL
+# My Telegram : https://t.me/MasWayVPN
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -19,13 +19,16 @@ if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Fuck You!!"
+echo -e "${NC}${LIGHT}Please Contact Admin!!"
+echo -e "${NC}${LIGHT}Untuk User Premium!!"
+echo -e "${NC}${LIGHT}WhatsApp : 6283120857907"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/MasWayVPN"
 exit 0
 fi
 clear
 apt install jq curl -y
 DOMAIN=nextvpn.xyz
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c6)
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c3)
 SUB_DOMAIN=${sub}.nextvpn.xyz
 CF_ID=akunabal.abal7770@gmail.com
 CF_KEY=4502348bc050806208bb10e3a1af5b9d1d018
@@ -85,6 +88,7 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      --data '{"type":"A","name":"'${WILD_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
 echo "Host : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /root/domain
+rm -f /root/cf.sh
 # / / Make Main Directory
 mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
