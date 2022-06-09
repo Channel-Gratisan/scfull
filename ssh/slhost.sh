@@ -20,7 +20,7 @@ SUB_DOMAIN=${sub}.nextvpn.xyz
 CF_ID=akunabal.abal7770@gmail.com
 CF_KEY=4502348bc050806208bb10e3a1af5b9d1d018
 echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/ipvps.conf
-echo "$NS_DOMAIN" >> /root/nsdomain
+echo "$SUB_DOMAIN" >> /root/nsdomain
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
